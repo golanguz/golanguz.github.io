@@ -53,7 +53,7 @@ Agar mavjudot funksiyaning ichida aniqlangan bo'lsa demak bu mavjudot o'sha
 funksiyaga ta'luqli va funksiyadan tashqarida qullanib bo'lmaydi, Agar funksiyadan
 tashqarida aniqlangan bo'lsa demak bu o'z paketining ichidagi hamma fayllarga 
 ko'rinadi.
-Ismining birinchi harfi aniqlangan mavjudotni boshqa patelarga va fayllarga 
+Ismining birinchi harfi aniqlangan mavjudotni boshqa paketlarga va fayllarga 
 kurinishini va ko'rinmasligini aniqlaydi, Agar ism Bosma harf bilan boshlansa 
 demak u butun programmangizning ichida ko'rinadi va qullansa bo'ladi, 
 Lekin paket isimlar faqat kichik harflar bilan yoziladi. Go'da aniqlanuvchi 

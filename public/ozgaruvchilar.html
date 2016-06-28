@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title>Golang uzbek, o'zbek, O'zgaruvchilar</title>
+  <meta name="keywords"
+       content="Golang uzbek, o'zbek, dasturlash, boshlang'ich dasturlash , o'zgaruvchilar">
+
+   <meta name="description"
+       content="Go dasturlash darslari, Inson tushunadigan darajada, O'zgaruvchilar">
+
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+       <link rel="icon"
+    type="image/png"
+    href="../go.png">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+
+<h1 style="color: green; font-style: italic; font-family: cursive;">#O'zgaruvchilar</h1>
+<div class="highlight"><pre><span></span><span class="c1">// O&#39;zgaruvchilarni aniqlash.</span>
+
+<span class="kn">package</span> <span class="nx">main</span> <span class="c1">// agar python&#39;da dasturlagan bo&#39;lsangiz, pythonga o&#39;xshash paket</span>
+<span class="c1">// nomlash</span>
+
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span> <span class="c1">// Go&#39;ning ichki kodidan fmt degan paketini import qilamis va,</span>
+<span class="c1">// Keyin pastda uning(&quot;fmt&quot;ning) ichidan &quot;Printf&quot; funksiyasini qullanib</span>
+<span class="c1">// farengeyt issiqligini terminalga yozib chiqaramiz.</span>
+
+
+<span class="kd">const</span> <span class="nx">farengeyt</span> <span class="p">=</span> <span class="mf">212.0</span> <span class="c1">// bu yerda const yani(o&#39;zgarmaydigan) aniqlaymiz va,</span>
+<span class="c1">// Uni farengeyt deb nomlaymiz uning qiymayi esa &quot;float64&quot; 212.0</span>
+<span class="c1">// keyin main() funksiyani ichida buni o&#39;zgaruvchi var f&#39;ga butunlay</span>
+<span class="c1">// topshiramiz</span>
+
+
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// funksiya main() faqat to&#39;planadigan programmalar uchun lozim</span>
+<span class="c1">// va muhim, Butun to&#39;planadigan programmangizda bitta main paket va uning</span>
+<span class="c1">// bitta main() funksiyasi bo&#39;lishi lozim. Agar kutubxona yoki paket</span>
+<span class="c1">// yaratiyotgan bo&#39;lsangiz main() funksiyasiz xam bo&#39;ladi.</span>
+
+	<span class="kd">var</span> <span class="nx">f</span> <span class="p">=</span> <span class="nx">farengeyt</span> <span class="c1">// Bu ayni funksiyadan tashqaridagi farengeyt</span>
+<span class="c1">// o&#39;zgarmaydigan constant buning qiymayi 212.0.		</span>
+
+
+	<span class="kd">var</span> <span class="nx">c</span> <span class="p">=</span> <span class="p">(</span><span class="nx">f</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span> <span class="c1">// Bu yerda esa biz yangi c o&#39;zgaruvchi </span>
+<span class="c1">// aniqlaymiz, Keyin uni qiymatini f deb aniqlaymiz qavs ichida f&#39;dan </span>
+<span class="c1">// 32&#39;ni ayramiz(&quot;qavslarni Go to&#39;planchisi birinchi bo&#39;lib yurguzadi&quot;)</span>
+<span class="c1">// bu degani biz birinchi 212.0&#39;dan 32 ayiramiz bu = 180 bo&#39;ladi</span>
+<span class="c1">// keyin u 180 qiymatni 5&#39;ga ko&#39;paytiramiz bu = 900 bo&#39;ladi</span>
+<span class="c1">// va oxirda 900&#39;ni 9&#39;ga bo&#39;lamiz bo = 100 bo&#39;ladi</span>
+
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;farengeyt issiqligi %g°F yoki selsium&#39;da %g°C\n&quot;</span><span class="p">,</span> <span class="nx">f</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
+<span class="c1">// bu yerda esa yuqoridagi fmt paketini import qilib uning Printf funksiyasini</span>
+<span class="c1">// qullanib to&#39;planchi bajargan hamma qushish va bo&#39;lishlarni terminalga yozib</span>
+<span class="c1">// chiqaramiz. Ushbu programmani yurgizsangiz terminalga</span>
+<span class="c1">// farengeyt issiqligi 212°F yoki selsium&#39;da 100°C degan habar ko&#39;rsatiladi.</span>
+
+<span class="p">}</span>
+
+<span class="c1">// O&#39;zgaruvchilar</span>
+
+<span class="c1">// var so&#39;zi oddiy bir o&#39;zgaruvchi turini yaratadi, Va uning ismini aniqlaydi,</span>
+<span class="c1">// Uning qiymatini ham aniqlaydi</span>
+	<span class="kd">var</span> <span class="nx">ism</span> <span class="nx">tur</span> <span class="p">=</span> <span class="nx">qiymat</span>
+<span class="c1">// tur yoki qiymat&#39;siz o&#39;zgaruvchilar aniqlash mumkin, Agar tur&#39;siz aniqlanadigan</span>
+<span class="c1">// bo&#39;lsa o&#39;zgaruvchining turi qiymat orqali aniqlanadi, Agar qiymatsiz aniqlansa</span>
+<span class="c1">// o&#39;zgaruvchining qiymati sonlar uchun 0 bo&#39;ladi, false booleanlar uchun,</span>
+<span class="c1">// va &quot;&quot; bo&#39;sh string stringlar uchun, nil interfacelar va referens turlari</span>
+<span class="c1">// (slice, pointer, map, channel, function) uchun.</span>
+
+<span class="c1">// nol-qiymatli mexanizm o&#39;zgaruvchi&#39;ning o&#39;zining turiga yarasha qiymati</span>
+<span class="c1">// borligini aniqlaydi</span>
+<span class="c1">// Misol</span>
+	<span class="kd">var</span> <span class="nx">s</span> <span class="kt">string</span> <span class="c1">// bu qiymatsiz lekin yuqorida aytib utilgandek</span>
+<span class="c1">// Go to&#39;plamchisi bunin qiymatini turiga qarab aniqlaydi va bizda xozir </span>
+<span class="c1">// s deb nomlangan o&#39;zgaruvchi bor uning turi string bu degani uning qiymati</span>
+<span class="c1">// &quot;&quot; bo&#39;sh string </span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="c1">// s&#39;ni chaqiramiz va yurgizami terminalda xato emas</span>
+<span class="c1">// boshlik ko&#39;ramiz.</span>
+
+<span class="c1">// Bir o&#39;zgaruvchida bir dan ko&#39;p qiymatlar aniqlasak bo&#39;ladi</span>
+
+	<span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">v</span> <span class="kt">int</span> <span class="c1">// a,b,v uchisining turi // int, int, int</span>
+<span class="c1">// Xuddi shunday qilib agar bularni tur&#39;siz aniqlasak ular o&#39;zlari aniqlaydi</span>
+	<span class="kd">var</span> <span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">v</span> <span class="p">=</span> <span class="kc">true</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="s">&quot;uch&quot;</span> <span class="c1">// bool, float64, string bo&#39;ladi</span>
+
+<span class="c1">// main() funksiyasi bo&#39;lgan faylingizda xar bir o&#39;zgaruvchi main&#39;dan oldin </span>
+<span class="c1">// aniqlanishi lozim</span>
+
+
+<span class="kd">var</span> <span class="p">(</span>
+	<span class="nx">ism</span> <span class="nx">tur</span> <span class="p">=</span> <span class="nx">qitmat</span>
+	<span class="nx">ism</span> <span class="nx">tur</span> <span class="p">=</span> <span class="nx">qiymat</span>
+	<span class="nx">ism</span> <span class="nx">tur</span> <span class="p">=</span> <span class="nx">qiymat</span>
+	<span class="nx">ism</span> <span class="nx">tur</span> <span class="p">=</span> <span class="nx">qiymat</span>
+<span class="c1">// bunaqasiham bo&#39;ladi</span>
+<span class="p">)</span>
+
+<span class="c1">// qisqacha o&#39;zgaruvchi aniqlash bular funksiyalarning ichida ishlatiladi</span>
+<span class="c1">// va bularning turi ularning qiymati orqali aniqlanadi</span>
+<span class="c1">// Misol</span>
+	<span class="kd">func</span> <span class="nx">qisqaOzgaruvchilar</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="nx">menQisqaOzgaruvchi</span> <span class="o">:=</span> <span class="s">&quot;salom&quot;</span>
+	<span class="nx">son</span> <span class="o">:=</span> <span class="mf">0.0</span>
+<span class="c1">// masalan funksiyanin ichida aniqlangan qisqa o&#39;zgaruvchilar </span>
+<span class="c1">// aniqalangan bo&#39;lsa, keyingi aniqlanyotgan o&#39;zgaruvchilar aniqlanmaydi</span>
+<span class="c1">// Misol</span>
+	<span class="nx">bir</span><span class="p">,</span> <span class="nx">ikki</span> <span class="o">:=</span> <span class="s">&quot;bir aniqlandi, ikki aniqlandi&quot;</span>
+	<span class="nx">uch</span><span class="p">,</span> <span class="nx">ikki</span> <span class="o">:=</span> <span class="s">&quot;uch aniqlandi, ikki yuqoridagi ikkiga yopishtirildi&quot;</span>
+<span class="c1">// qisqa o&#39;zgaruvchilar kamida bitta yangi o&#39;zgaruvchi aniqlashi lozim,</span>
+<span class="c1">// Misol </span>
+	<span class="nx">tort</span><span class="p">,</span> <span class="nx">besh</span> <span class="o">:=</span> <span class="s">&quot;zo&#39;r gap yo&#39;q&quot;</span>
+	<span class="nx">tort</span><span class="p">,</span> <span class="nx">besh</span> <span class="o">:=</span> <span class="s">&quot;xato to&#39;plamchi buzuldi&quot;</span>
+<span class="c1">// buni to&#39;g&#39;rilash uchun ikkinchi aniqlanuvchini oddiy o&#39;zgaruvchi qilib</span>
+<span class="c1">// aniqlang</span>
+	<span class="p">}</span>
+</pre></div>
+
+
+
+<a style="text-align: center;" href="keywords.html">oldingi</a> <br/ >
+<a style="text-align: center;" href="../index.html">bosh sahifaga</a> <br />
+<a style="text-align: center;" href="#">keyingi</a>
+
+
+</body>
+</html>
