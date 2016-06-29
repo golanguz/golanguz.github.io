@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title>Golang uzbek, o'zbek, Turlar</title>
+  <meta name="keywords"
+       content="Golang uzbek, o'zbek, dasturlash, boshlang'ich dasturlash , Turlar">
+
+   <meta name="description"
+       content="Go dasturlash darslari, Inson tushunadigan darajada, Turlar">
+
+   <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+       <link rel="icon"
+    type="image/png"
+    href="../go.png">
+
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+<h1 style="color: green; font-style: italic; font-family: cursive;">#Turlar</h1>
+
+<div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">Go bu statik dasturlash tili. Bu degani o&#39;zgaruvchilar&#39;ning hamma vaqt turalari </span>
+<span class="cm">bor, Va u tur hech qachon o&#39;zgarmaydi, Statik yozish bu boshida no qulay</span>
+<span class="cm">bo&#39;lishi mumkin, Ammo statik yozish bizga programmamizni yaxshi tushunishga</span>
+<span class="cm">imkoniyat beradi.</span>
+
+<span class="cm">Birnchi sahifada aytib utganday Go&#39;da saqlangan soz&#39;lar bor, Shular xaqida o&#39;rganamiz</span>
+<span class="cm">*/</span>
+<span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span><span class="s">&quot;fmt&quot;</span><span class="p">)</span>
+
+<span class="c1">// Sonlar</span>
+<span class="c1">// Asosan go da sonlar uchun ikki xil turlar bor.</span>
+<span class="c1">// Ular integers va floating-point sonlar</span>
+
+<span class="c1">// #Integerlar bular nuqtasiz va minus&#39;siz bo&#39;lgan sonlar (-2,3.4,-4)</span>
+<span class="c1">// Go&#39;da to&#39;rt xil uzunlik integerlar bor ular: 8, 16, 32, va 64 bit</span>
+<span class="c1">// Ular o&#39;zlarining tularibilan namoyish etiladi va </span>
+<span class="c1">// turlari: int8, int16, int32, int64</span>
+<span class="c1">// va O&#39;ziga xos yozilmagan integerlar bor ular:</span>
+<span class="c1">// uint8, uint16, uint32, uint64</span>
+<span class="c1">// int va uint deganlari xam bor bular uchun uzinligini aniqlash shart emas.</span>
+<span class="c1">// eng ko&#39;p ishlatiladigani bu int bularning ikkisi xam, 32 yoki 64 bit bo&#39;ladi</span>
+<span class="c1">// ammo siz fol ochishingiz shart emas, Chunki to&#39;plamchilar farqli to&#39;playdilar</span>
+<span class="c1">// va int bilan int32 bular ummuman farqli turlar, int bu -128 127&#39;ga,</span>
+<span class="c1">// int32 esa 0 255&#39;ga</span>
+
+<span class="c1">// Quydagilar goning arifmetik operatorlari</span>
+
+	<span class="o">*</span>	<span class="o">/</span>	<span class="o">%</span>	<span class="o">&lt;&lt;</span>	<span class="o">&gt;&gt;</span>	<span class="o">&amp;</span>	<span class="o">&amp;^</span>
+	<span class="o">+</span>	<span class="o">-</span>	<span class="p">|</span>	<span class="p">^</span>
+	<span class="o">==</span>	<span class="o">!=</span>	<span class="p">&lt;</span>	<span class="o">&lt;=</span>	<span class="p">&gt;</span>	<span class="o">&gt;=</span>
+	<span class="o">&amp;&amp;</span>
+	<span class="o">||</span>
+
+<span class="c1">// operatorlar chap tomondan boshlanadi(xisoblanadi) Agar shart qavs ichida</span>
+<span class="c1">// va o&#39;ng tomonda bo&#39;lsa demak birinchi qavs ichidagi shart yurgiziladi</span>
+<span class="c1">// misol, qo&#39;shish &amp; (2+2) birinchi qavs ichi xisoblanadi.</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	  <span class="c1">// (*) Ko&#39;pincha ko&#39;paytirish manosini bildiradi, Ko&#39;rsatgichlar</span>
+	  <span class="c1">//bilan xam ishlatiladi. </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">7</span><span class="p">)</span><span class="c1">// 14 </span>
+	  <span class="c1">// Ko&#39;rsatgich.</span>
+				<span class="nx">k</span> <span class="o">:=</span> <span class="mi">1</span>
+				<span class="nx">q</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">k</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="o">*</span><span class="nx">q</span><span class="p">)</span> <span class="c1">// 1</span>
+	  <span class="c1">// (/) Bo&#39;lish </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mf">7.</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">)</span> <span class="c1">// 3.5 float64</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">7</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1">// 3   int</span>
+	  <span class="c1">// (%) Qoldiq </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1">// 1</span>
+	  <span class="c1">// (&lt;&lt;) Chap&#39;ga ozgartirish manosini bildiradi</span>
+				<span class="kd">var</span> <span class="nx">x</span> <span class="kt">uint8</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span>
+				<span class="kd">var</span> <span class="nx">y</span> <span class="kt">uint8</span> <span class="p">=</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">3</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%08b\n&quot;</span><span class="p">,</span> <span class="nx">x</span><span class="p">)</span> <span class="c1">// 00100000 </span>
+				<span class="c1">// birni besh chapga o&#39;tkazdi</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%08b\n&quot;</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="c1">// 00001000</span>
+				<span class="c1">// birni uch marta chapga o&#39;tkazdi</span>
+	<span class="c1">// (&gt;&gt;) O&#39;ng tomongo o&#39;zgartirish xuddi yuqoridagidek ishlaydi</span>
+
+	<span class="c1">// (&amp;&amp;) Va(and) </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">// true</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">// false</span>
+	<span class="c1">// (||) yoki </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="kc">true</span> <span class="o">||</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">// true</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="kc">true</span> <span class="o">||</span> <span class="kc">false</span><span class="p">)</span> <span class="c1">// true</span>
+	<span class="c1">// (!) yoq </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(!</span><span class="kc">true</span><span class="p">)</span> <span class="c1">// false</span>
+	<span class="c1">// (teng) </span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// false</span>
+				<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">// true</span>
+	<span class="c1">// (&lt;=) oz yoki teng </span>
+	<span class="c1">// (&gt;=) ko&#39;p yoki teng </span>
+	<span class="c1">// (&lt;) oz</span>
+	<span class="c1">// (&gt;) ko&#39;p</span>
+	<span class="c1">// (!=) teng emas</span>
+<span class="p">}</span>
+
+<span class="c1">// Floating point sonlar</span>
+<span class="c1">// (1.23, 32.43, 0.00000343, 1233432)</span>
+<span class="c1">// floattin point sonlar ikki turda keladi float32 fa float64</span>
+<span class="c1">// ko&#39;pincha dasturchilar float64&#39;ni qullanishadi xullas float bu int&#39;ga </span>
+<span class="c1">// o&#39;xshash, Nuqta bilan ishlatsa bo&#39;ladi ammo int&#39;da nuqta mumkin emas.</span>
+</pre></div>
+
+<a style="text-align: center;" href="ozgaruvchilar.html">oldingi</a> <br/ >
+<a style="text-align: center;" href="../index.html">bosh sahifaga</a> <br />
+<a style="text-align: center;" href="#">keyingi</a>
+
+</body>
+</html>
