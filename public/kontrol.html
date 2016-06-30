@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title>Golang uzbek, o'zbek, Kontrol</title>
+  <meta name="keywords"
+       content="Golang uzbek, o'zbek, dasturlash, boshlang'ich dasturlash, Kontrol">
+
+   <meta name="description"
+       content="Go dasturlash darslari, Inson tushunadigan darajada, Kontrol">
+       <link rel="icon"
+    type="image/png"
+    href="../go.png">
+  <style type="text/css">
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+
+<h1 style="color: green; font-style: italic; font-family: cursive;">#Kontrol</h1>
+
+<div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">O&#39;zgaruvchilarni o&#39;rgangandan keyin kichkina programmalar yaratib boshlasag</span>
+<span class="cm">bo&#39;ladi, Masalan bir programma yozaylik u 1&#39;dan 10&#39;gacha sanashni bilsin</span>
+<span class="cm">bizdagi bilim bilan biz quydagi kodni yozishimiz mumkin.</span>
+<span class="cm">*/</span>
+<span class="kn">package</span> <span class="nx">main</span>
+
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// yoki buni</span>
+
+<span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">`</span>
+<span class="s">	1</span>
+<span class="s">	2</span>
+<span class="s">	3</span>
+<span class="s">	4</span>
+<span class="s">	5</span>
+<span class="s">	6</span>
+<span class="s">	7</span>
+<span class="s">	8</span>
+<span class="s">	9</span>
+<span class="s">	10`</span><span class="p">)</span>
+
+<span class="p">}</span>
+
+<span class="c1">// Lekin bu ikkisi ham noqulay, Bizga bir narsani bir&#39;dan ko&#39;p marta yurgizadigan</span>
+<span class="c1">// programma kerak. Misol: For loop</span>
+
+<span class="c1">//package main</span>
+
+<span class="c1">//import &quot;fmt&quot;</span>
+
+<span class="c1">//func main() {</span>
+
+	<span class="c1">// i := 1  qiymatlarni ushlash uchun o&#39;zgaruvchi yaratamiz ismi </span>
+<span class="c1">// (i) qiymati (1)</span>
+
+	<span class="c1">//for i &lt;= 10 {  keyin loop yaratamiz for so&#39;zi bilan keyin</span>
+<span class="c1">// unga vazifa beramiz bu i &lt; 10&#39;dan oz yoki tengmi, Buning qaytimi boolean</span>
+<span class="c1">// true(rost) yoki false(yolg&#39;on) keyin forning badanini yaratamiz halqalar bilan</span>
+
+	<span class="c1">// fmt.Println(i)  birdan o&#39;ngacha yozib chiqaradi</span>
+	<span class="c1">// i = i + 1  bu juda ham muhum chunki yuqoridagi for shartimiz</span>
+	<span class="c1">//}</span>
+<span class="c1">// bo&#39;lmaganda</span>
+<span class="c1">// bu to&#39;xtamastan ishlardi va uni infinite loop deyishadi. Biz bu yerda i&#39;ni</span>
+<span class="c1">// i&#39;ga qo&#39;shyapmiz keying u ikki qo&#39;shilgan i&#39;larga 1&#39;ni qo&#39;shyapmiz, </span>
+<span class="c1">// Chunki yuqorida for loop tekshiryapti i &lt;= 10&#39;dan oz tengmi?, </span>
+<span class="c1">// Xullas programma toki for loop</span>
+<span class="c1">// 10&#39;ga teng bo&#39;lguncha ishlaydi keyin esa for loop true habarini olgandan</span>
+<span class="c1">// keyin terminalga yozishni to&#39;xtatadi.</span>
+
+
+<span class="c1">// Biz i o&#39;zgaruvchisini aniqladig uning qiymati 1</span>
+
+<span class="c1">// keyin usha i o&#39;zgaruvchisini tekshirdik u i &lt;= 10&#39;dan oz yoki teng u 10&#39;gacha</span>
+<span class="c1">// tekshiradi for loop&#39;ning  vazifasi i&#39;ni 10&#39;ga yetguncha terminalga yozib</span>
+<span class="c1">// chiqaradi</span>
+
+<span class="c1">// keyin terminalga yozib chiqardik fmt.Println(i)</span>
+
+<span class="c1">// keyin i&#39;ga birni qoshib i&#39;ga qaytatdan qoshdik bu degani i&#39;ning qiymati 2 </span>
+<span class="c1">// bo&#39;ldi, Shunday qilib xisob 10 bo&#39;lguncha davom etdik</span>
+
+
+<span class="c1">// boshqa dasturlash tillarida farqli sintaks ko&#39;rishingiz mumkin </span>
+<span class="c1">// u sintaks xam goda ishlaydi misol</span>
+
+<span class="c1">//	func main() {</span>
+<span class="c1">//		for i := 1; i &lt;= 10; i++ { </span>
+<span class="c1">//			fmt.Println(i)	</span>
+<span class="c1">//	}</span>
+<span class="p">}</span><span class="c1">// bu ham xuddi yuqoridagi for loop&#39;ga o&#39;xshab vazifani bajaradi</span>
+<span class="c1">// ammo biz bu yerda i++ deb qisqachasiga yozyapmiz unin o&#39;rniga</span>
+<span class="c1">// i = i + 1 desag ham programmamiz ishlaydi</span>
+
+<span class="c1">// if(agar)</span>
+
+<span class="c1">// bu safar programmamizni bir oz o&#39;zgartiramiz u nafaqat birdan o&#39;ngacha</span>
+<span class="c1">// va ularning juft va toqligini yozib chiqarsin</span>
+<span class="c1">// birinchi bo&#39;lib biz son juft yoki yotqligini aniqlaydigan yo&#39;l yopishimiz lozim</span>
+<span class="c1">// eng oson yo&#39;li biz buni 2 bo&#39;lishni o&#39;rgatishimiz kerak, agar qoldiq bo&#39;lmasa</span>
+<span class="c1">// demak bu juft, bo&#39;lmasa toq. Agar esingizda bo&#39;lsa oldingi sahifalardan</span>
+<span class="c1">// buning uchun qoldiq % belgisini ishlatsak bo&#39;ladi. 1 % 2 1&#39;ga barogar</span>
+<span class="c1">// 2 % 2 0&#39;ga barobar, 3 % 2 1&#39;ga barobar</span>
+<span class="c1">// Misol</span>
+<span class="cm">/*</span>
+<span class="cm">	if i % 2 == 0 {</span>
+<span class="cm">		fmt.Println(&quot;juft&quot;)</span>
+<span class="cm">	} else {</span>
+<span class="cm">		fmt.Println(&quot;toq&quot;)</span>
+<span class="cm">	}</span>
+<span class="cm">*/</span>
+
+<span class="c1">// if bayonoti for&#39;ga o&#39;xshaydi ammo uning else bayonoti bor, if bayonotida</span>
+<span class="c1">// agar true chiqsa keyingi block yuruladi agar chiqmasa else bayonot bo&#39;lsa</span>
+<span class="c1">// else bayonoti yuruladi, va uni uzunroq qilish uchun unda else if bayonoti bor</span>
+<span class="c1">// Misol</span>
+<span class="cm">/*</span>
+<span class="cm">	if i % 2 == 0 {</span>
+<span class="cm">		ikkiga bo&#39;linadi	</span>
+<span class="cm">	} else if i % 3 == 0 {</span>
+<span class="cm">		uchga bo&#39;linadi</span>
+<span class="cm">	} else if i % 4 == 0 {</span>
+<span class="cm">		turtga bo&#39;linadi</span>
+<span class="cm">	}</span>
+<span class="cm">shartlar yuqoridan pastga yurgiziladi, Agar birinchi boyonot true(rost) bo&#39;lib</span>
+<span class="cm">chiqsa demak shu bayonot yurgiziladi, va keyingi bayonotlar yurguzilmaydi</span>
+<span class="cm">hatto ki ularning biri ham ture bo&#39;lib chiqsa, masalan 8 4bilan bo&#39;linadi</span>
+<span class="cm">va 2 bilan bo&#39;linadi, ammo bu yurgizilmaydi chunki birinchi true(rost) chiqqanda</span>
+<span class="cm">programma boshqalarni tekshirishni to&#39;xtatadi</span>
+
+<span class="cm">butun kod quyidagidek</span>
+<span class="cm">	</span>
+<span class="cm">	func main() {</span>
+<span class="cm">		for i := 1; &lt;= 10; i++ {</span>
+<span class="cm">			if i % 2 == 0 {</span>
+<span class="cm">				fmt.Println(i, &quot;juft&quot;)	</span>
+<span class="cm">			} else {</span>
+<span class="cm">				fmt.Println(i, &quot;toq&quot;)</span>
+<span class="cm">			}</span>
+<span class="cm">		}</span>
+<span class="cm">	}</span>
+<span class="cm">	// o&#39;zgaruvchi yaratdik i uning turi int qiymati 1</span>
+<span class="cm">	// i 10&#39;dan kam yoki teng? agar rost bo&#39;lsa keyingisiga sakra</span>
+<span class="cm">	// i ÷ 2 0&#39;ga tengmi? yoq bo&#39;lsa else blockiga sakra</span>
+<span class="cm">	// i&#39;ni terminalga toq deb yozib chiqar</span>
+<span class="cm">	// i&#39;ga 1&#39;ni qo&#39;sh chunki i++ yuqorida</span>
+<span class="cm">	// i 10&#39;dan oz&#39;mi ? ha keyingi block&#39;ga sakra</span>
+<span class="cm">	// i ÷ 2 0&#39;ga tengmi ? ha if blocki&#39;ga sakra </span>
+<span class="cm">	// i&#39;ni terminalga juft deb yozib chiqar</span>
+<span class="cm">*/</span>
+<span class="c1">// Switch(almash)</span>
+<span class="cm">/*</span>
+<span class="cm">misol biz bir programma yaratmoqchimiz va u programma hamma sonlarni o&#39;zbek</span>
+<span class="cm">so&#39;zlari bilan yozib chiqarsin bor bilimimiz bilan bi quydagi programmani</span>
+<span class="cm">yozardik</span>
+
+<span class="cm">	if i == 0 {</span>
+<span class="cm">	  fmt.Println(&quot;Nol&quot;)</span>
+<span class="cm">	} else if i == 1 {</span>
+<span class="cm">	  fmt.Println(&quot;Bir&quot;)</span>
+<span class="cm">	} else if i == 2 {</span>
+<span class="cm">	  fmt.Println(&quot;Ikki&quot;)</span>
+<span class="cm">	} else if i == 3 {</span>
+<span class="cm">	  fmt.Println(&quot;Uch&quot;)</span>
+<span class="cm">	} else if i == 4 {</span>
+<span class="cm">	  fmt.Println(&quot;To&#39;rt&quot;)</span>
+<span class="cm">	} else if i == 5 {</span>
+<span class="cm">	  fmt.Println(&quot;Besh&quot;)</span>
+<span class="cm">	}</span>
+<span class="cm">bu yo&#39;lda programa yozish juda ham noqulay go&#39;da buni ossonroq qilish uchun</span>
+<span class="cm">switch(almash) bayonoti bor u switch bayonotibilan quydagidek yozardik</span>
+
+<span class="cm">	switch i {</span>
+<span class="cm">	case 0: fmt.Println(&quot;Nol&quot;)</span>
+<span class="cm">	case 1: fmt.Println(&quot;Bir&quot;)</span>
+<span class="cm">	case 2: fmt.Println(&quot;Ikki&quot;)</span>
+<span class="cm">	case 3: fmt.Println(&quot;Uch&quot;)</span>
+<span class="cm">	case 4: fmt.Println(&quot;To&#39;rt&quot;)</span>
+<span class="cm">	case 5: fmt.Println(&quot;Besh&quot;)</span>
+<span class="cm">	default: fmt.Println(&quot;Nomalum son&quot;)</span>
+<span class="cm">	}</span>
+<span class="cm">switch bayonoti switch so&#39;zi bilan boshlanadi undan keyin bajaruv bu (i)</span>
+<span class="cm">keyin esa bir necha martta case(hodisa) so&#39;zi bajaruvning qitmati case so&#39;ziga</span>
+<span class="cm">taqqoslanadi agar bajaruv true bo&#39;lib chiqsa demak :&#39;dan keyingi fmt yurgiziladi</span>
+<span class="cm">xuddi if bayonoti&#39;ga oxshab switch yuqoridan pastga yurgiziladi, true deb teng </span>
+<span class="cm">bo&#39;ladigani yurgiziladi, switch bayonotida default suzi xam qullaniladi u degani</span>
+<span class="cm">agar yuqoridagilarni birontasixam teng rost chiqmasa demak u default bajaruv</span>
+<span class="cm">yurgiziladi</span>
+<span class="cm">*/</span>
+</pre></div>
+<a style="text-align: center;" href="string.html">oldingi</a><br />
+<a style="text-align: center;" href="../index.html">bosh sahifaga</a><br />
+<a style="text-align: center;" href="">keyingi</a> <br />
+<a style="text-align: center;" href="https://play.golang.org/p/GMtJyFO1jN">keyingi</a>
+
+</body>
+</html>
