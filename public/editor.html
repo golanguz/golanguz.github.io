@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom editorini o'rdanish</title>
+  </head>
+  <body>
+      <h1>Atom editorini O'rnatish</h1>
+
+      <p> Go dasturlash tilda programmlar yozish uchun atom editorini yuklab olamiz <br />
+          <a href="https://atom.io/" title="Atom editor">Atom</a> <br />
+          windows uchun avtomatik xolatda o'rnatiladigan bo'lib yuklanadi <br />
+          agar linux sistemi uchun o'rnatyotgan bo'lsangiz, bu quydagidek: <br />
+          .deb faylini yuklaysiz.
+      </p>
+
+      <img src="../pics/atom.jpg" alt="huzur" height="500" width="800" />
+
+      <p> Linux uchun yuklagan bo'lsangiz quyidagidek o'rnatasiz: <br />
+          atom yuklangan quttiga borib terminalda <br />
+          sudo dpkg --instal atom-amd64.deb buyruqini yurgizasiz <br />
+          <a href="https://github.com/atom/atom">Atom haqida farqli informatsiya</a>
+      </p>
+
+      <img src="../pics/atominstall.jpg" alt="huzur" height="500" width="800" />
+
+      <p>
+        editorni o'rnatib bo'lgandan keyin, uni ochib chap tomondan tepada <br />
+        edit degan referensni ochib uning ichida preferences deganini ochamiz <br />
+        u bizga yangi oyna ochadi uning ichida chap tomondan Install deganini bosib <br />
+        go-plus paketini axtaramiz va yuklaymiz u Go bilan ishlashni ossonlashtiradi <br />
+      </p>
+
+      <img src="../pics/atomgoplus.jpg" alt="huzur" height="500" width="800" />
+
+      <p>
+        agar xozircha editor ishlatishni xoxlamasangiz <br />
+        <a href="https://plat.golang.org">Go kodini onlayn yozish</a> ham mimkin <br />
+        lekin biz sistemga qarashli kod yozishimiz xam mumkin, u web browserda ishlamaydi
+      </p>
+      <p>
+          boshqa ujratsiz editorlar: <br />
+          <a href="https://code.visualstudio.com">VSCODE</a>
+          <a href="https://www.sublimetext.com/">Sublime text</a>
+
+      </p>
+
+      <ul>
+        <a href="env.html" title="Quttilar tuzilmasi">Keyingi sahifa</a> <br />
+        <a href="ornatishw.html" title="Windows sistemiga o'rnatish">Oldingi sahifa</a> <br />
+        <a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+      </ul>
+
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+           */
+          /*
+          var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() {  // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = '//golanguzgithubio.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+
+
+  </body>
+</html>
