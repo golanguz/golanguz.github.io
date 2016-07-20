@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Golang dasturlash tilini sistemga o'rnatish</title>
+  </head>
+  <body>
+      <h1>Linux(ubuntu) sistemga o'rnatish</h1>
+
+      <h3>Yuklash</h3>
+      <p>Go dasturlash tilini sistemga o'rnatishdan oldin uni yukash lozim
+        buni <a href="https://golang.org/">golang.org</a> <br />
+        saytidan tuklashingiz mumkin.
+      </p>
+      <img  src="../pics/golangorg.jpg"  alt="huzur" height="500" width="800" /> <br />
+      <p>Keyin esa sistemingizga mos ornatgichni yuklaysiz <br />
+         Linux uchun tar.gz bilan tugaydigan faylni yukalymiz. <br />
+      </p>
+      <img  src="../pics/godownload.jpg"  alt="huzur" height="500" width="800" /> <br />
+      <p>
+      sistemingizga yuklagandan keyin <br />
+      uni tar.gz kompresslangan qutti ichidan chiqarish lozim, quyidagidek: <br />
+      Go linux uchun yuklangan quttiga borib, mening quttim masalan "downloads" <br />
+      terminalingizda tar -C /usr/local -xzf go1.6.3.linux-amd64.gz yurgizishingiz lozim <br />
+      agar yuqoridagi buyruq ishlamasa <br />
+      tar xvf go1.6.linux-amd64.tar.gz yurgizing undan keyin <br />
+      sudo chown -R root:root ./go  va sudo mv go /usr/local buyruqlarini yurgizing <br />
+      bu buyruqlar Go'ni usr/local'ga Goni kompress quttisidan chiqarib joylashi lozim
+      </p>
+
+      <img  src="../pics/linuxinstall.jpg"  alt="huzur" height="500" width="800" /> <br />
+
+      <p>
+        keyin Go'ni, o'zgaruvchilar yo'lchasiga yozishimiz lozim, <br />
+        uning uchun sudo gedit ~/.bashrc buyruqini yurgizamiz <br />
+        quydagi rasimning chap tomonidagi editor ochiladi <br />
+        editorning eng pastiga <br />
+        export GOPATH=$HOME/Go <br />
+        export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin <br />
+        buyruqlarni yozamiz. <br />
+        birinchi exportimiz Go dasturlash tilini HOME quttisidagi <br />
+        Go quttisiga ko'rsatgan <br />
+        ikkinchisi <br />
+        Go'ning o'zini yo'lchasini aniqlagan va GOPATH'nin ichidagi<br />
+        bin quttisiga alohida ko'rsatgan. <br />
+        ko'p xam tushunmagan bo'lsangiz, o'qishni davom ettirovuring
+
+      </p>
+
+      <img  src="../pics/bashrc.jpg"  alt="huzur" height="500" width="800" /> <br />
+
+      <p>Go to'g'ri o'rnatilganmu yo'qmu, uning tekshirish yo'li <br />
+         terminalingizni ochib kichik xarflar bilan "go" yoki "go env" so'zini yozing <br />
+         agar yuqorida aytib o'tilgan ishlarni to'g'ri qilgan bo'lsangiz <br />
+         terminalda ushbu xabarni ko'rishingiz kerak, <br />
+         bu degani sizning sistemingizda Go o'rnatilgan va ishlyapti.
+      </p>
+      <img  src="../pics/gocmdd.jpg"  alt="huzur" height="500" width="800" /> <br />
+
+      <div id="disqus_thread"></div>
+      <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+           */
+          /*
+          var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() {  // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = '//golanguzgithubio.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+
+  </body>
+</html>
