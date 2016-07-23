@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+
+  body{
+    margin-left: 100px;
+  }
+
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2 style="font-style: italic; color: purple;">#String</h2>
+
+<div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">String aniq uzunligi belgilari ketma ketligi matnni ko&#39;rsatish uchun ishlatiladi.</span>
+<span class="cm">Go stringlari individual bayt orqali tashkil etilgan, odatda har bir bayt uchun</span>
+<span class="cm">bir belgi(xitoy belgilari uchun esa birdan ko&#39;p bayt ishlatiladi).</span>
+<span class="cm">String literallari qo&#39;shaloq kuvota(&quot;&quot;) &quot;Salom, Gopherbek&quot; bilan yaratiladi yoki</span>
+<span class="cm">backtick bilan (``) `Salom Gopherbek` bularning farqi qo&#39;shaloq &quot;&quot; kuvotalar</span>
+<span class="cm">yangi chiziq ishlatolmaydi, ammo ular mahsus belgi qullanadilar Misol \n</span>
+<span class="cm">yangi chiziqqa tushiradi. va \t tab belgisi bu, Belgilar o&#39;rtasida 8&#39;ta </span>
+<span class="cm">bo&#39;shlik yaratadi. Misol stringlar qullangan programma quydagidek.</span>
+<span class="cm">*/</span>
+
+<span class="kn">package</span> <span class="nx">main</span>
+
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Salom, Gopherbek&quot;</span><span class="p">)</span> <span class="c1">// oddiy xabar </span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Salom\t&quot;</span><span class="p">,</span> <span class="s">&quot;Gopherbek&quot;</span><span class="p">)</span> <span class="c1">// tab(8&#39;ta bo&#39;shlik) qo&#39;shilgan</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Salom &quot;</span> <span class="o">+</span> <span class="s">&quot;Gopherbek&quot;</span><span class="p">)</span> <span class="c1">// ikki string qo&#39;shilgan </span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Salom\n&quot;</span><span class="p">,</span> <span class="s">&quot;Gopherbek&quot;</span><span class="p">)</span> <span class="c1">// yangi chiziqqa tushirilgan</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">`Salom,	</span>
+<span class="s">				Gopherbek`</span><span class="p">)</span> <span class="c1">// backtick bilan yangi chiziqqa</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="s">&quot;Salom, Gopherbek&quot;</span><span class="p">))</span> <span class="c1">// belgilar uzunligini hisoblash</span>
+<span class="c1">// len() funksiyasini qullanib belgilarni uzunligini saniyapmiz qo&#39;shaloq</span>
+<span class="c1">// kuvotalarni ichida bo&#39;shlik belgi deb hisoblanadi.</span>
+<span class="c1">// agar string&#39;ning ichidagi belgilardan birini terminalga yozmoqchi</span>
+<span class="c1">// bo&#39;lsangiz</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Salom, Gopherbek&quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">// deb yozishingiz mumkin ammo </span>
+<span class="c1">// terminalda xarf o&#39;rniga son(97) ko&#39;razis chunki:</span>
+<span class="c1">// qo&#39;shaloq kuvotalar ichidagi beliglar ular multi-byte(ko&#39;plik-bayt) UTF-8</span>
+<span class="c1">// kodlash individual belgilari qullaniyotgan bo&#39;lishi mumkin, </span>
+<span class="c1">// va byte bu intejer(son). </span>
+<span class="c1">//Demak string&#39;ning ichidagi belgini yozib chiqarish uchun:</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%c\n&quot;</span><span class="p">,</span> <span class="s">&quot;Salom, Gopherbek &quot;</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">// a xarfini terminalga yozadi</span>
+<span class="c1">// chunki string indeksiyatsiyasi 0&#39;dan boshlanadi quydagidek</span>
+<span class="c1">// esingizda bo&#39;lsa  bo&#39;shlik xam sanaladi</span>
+<span class="c1">// &quot;S   a   l   o   m   ,     G   o   p   h   e   r   b   e   k&quot; </span>
+<span class="c1">//  0   1   2   3   4   5  6  7   8   9   10  11  12  13  14  15</span>
+<span class="c1">//</span>
+<span class="c1">//      bir sonini a yozib chiqaradi.</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">([]</span><span class="nb">rune</span><span class="p">(</span><span class="s">&quot;Salom, Gopherbek&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span> <span class="c1">// UTF-8</span>
+
+<span class="c1">// bular haqida  kechroq o&#39;rganamiz</span>
+
+<span class="c1">// yuqoridagi len() funksiyasi 1234.... deb sanashni boshlaydi</span>
+<span class="c1">// chunki biz string&#39;ning ichidan xarf ajratiyotganimiz yo&#39;q ularning miqdorini</span>
+<span class="c1">// bilmoqchimiz.</span>
+<span class="p">}</span>
+</pre></div>
+
+<a href="https://play.golang.org/p/Den3B0uFDO">Kodni yurgizing</a>  <br />
+<a href="ozgaruvchi.html" title="O'zgaruchi">Keyingi sahifa</a> <br />
+<a href="boolean.html" title="Boolean">Oldingi sahifa</a> <br />
+<a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+
+<div id="disqus_thread"></div>
+      <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+           */
+          /*
+          var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() {  // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = '//golanguzgithubio.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+
+
+</body>
+</html>

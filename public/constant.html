@@ -3,12 +3,14 @@
 
 <html>
 <head>
-  <title>Go Haqida</title>
+  <title></title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <style type="text/css">
-  body{
-    margin-left: 100px;
-  }
+
+body{
+  margin-left: 100px;
+}
+
 td.linenos { background-color: #f0f0f0; padding-right: 10px; }
 span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
 pre { line-height: 125%; }
@@ -80,47 +82,33 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
   </style>
 </head>
-<h2 style="font-style: italic; color: purple;">#Go Haqida</h2>
+<body>
+<h2 style="font-style: italic; color: purple;">#Constant</h2>
 
 <div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">Avvalan bor Go dasturlash tili haqida bir oz ma&#39;lumot</span>
-<span class="cm">Go dasturlash tili Google korporatsiyasida 2009 yil yaratilgan </span>
-<span class="cm">uni yaratgan insonlar Robert griesemer, Rob pike, Ken thompson.</span>
-<span class="cm">https://en.wikipedia.org/wiki/Go_(programming_language)</span>
-<span class="cm">nima sababdan Google bu dasturlash tilini yaratdi? chunki, ular allaqachon </span>
-<span class="cm">ischlatiyotgan dasturlash tillari C++, Java, Python, va boshqa&quot;. Google </span>
-<span class="cm">korporatsiyasiga kerak bolgan performans bera ololmaganligi uchun yaratilga </span>
-<span class="cm">xozirgi zamonda Google&#39;ning 90foyizga yaqin backend&#39;i Golang dasturlash </span>
-<span class="cm">tilini ishlatadi, agar bilsangiz Google.com saytiga kuniga 1&#39;miliard&#39;dan ko&#39;p </span>
-<span class="cm">inson tashrif etadi, Va bullarning hammasi Golang yordami bilan eplanadi.</span>
-
-<span class="cm">Go bu statik-yozilim va garbage-collected dasturlash tili u ko&#39;p</span>
-<span class="cm">tillardan ALGOL60, CSP, Squeak, Newsqueak, Alef, Pascal, Modula-2, Oberon,</span>
-<span class="cm">Object Oberon, Oberon2, Va ko&#39;pincha C dan  g&#39;oya olgan. Statik-yozilim,</span>
-<span class="cm">Bu degani siz kod yoziyotganingizda Go To&#39;plamchisi(Compiler) xatolaringizni</span>
-<span class="cm">tekshiradi misol atom editorida go-plus paketini o&#39;rnatgan bo&#39;lsangiz</span>
-<span class="cm">kod yoziyotganingizda var ni o&#39;rniga car deb yozsangiz u sizga car so&#39;zini</span>
-<span class="cm">tagida qizli chiziq yozadi(xato degani),</span>
-<span class="cm">Go to&#39;plamchisi xam xuddi shunday ishlaydi.</span>
-<span class="cm">garbage-collceted(axlat-teruvchi)? Sistemingizdagi xotiralarni Go programmasi </span>
-<span class="cm">Qullanmiyotgan bo&#39;lsa Go to&#39;plamchisi o&#39;sha xotiralarni Bo&#39;shatadi,</span>
-<span class="cm">Qanaqa xotira? Misol birinchi sahifamizda ko&#39;rganingizdek (&quot;salom gopherbek&quot;)</span>
-<span class="cm">programmasini yozdik, uning xotirasi (mening sitemimda)&quot;0xc82000a310&quot; adresida, </span>
-<span class="cm">siszning sistemingizda farqli bo&#39;lishi mumkin. Ammo katta proyektlarda</span>
-<span class="cm">biz (&quot;salom gopherbek&quot;) yozmaymiz, Bizda yuzlab o&#39;zgaruvchilar,funksiyalar</span>
-<span class="cm">va structlar bo&#39;ladi, Va ularning xammasi o&#39;zlariga sistemingizda joy aniqlashadi.</span>
-<span class="cm">Misol sizda mobil o&#39;yin dasturi bor, va qullanuvchi u o&#39;yinni o&#39;yniyapti</span>
-<span class="cm">farqli tugmalarni bosiyapti, lekin sizning dasturingizsa tugmalar juda xam ko&#39;p</span>
-<span class="cm">ammo qullanchi faqat 2ta tugmani bosiyapti boshqa tugmalar ishlatilmasdan turipti</span>
-<span class="cm">lekin mobil telefonida xotira sarfliyapti, shu yerda (axlat-teruvchi) ishga</span>
-<span class="cm">tushadi bosilmiyotgan tugmalarni xotirasini bo&#39;shatadi(toki qullanchi ularni</span>
-<span class="cm">bosguncha) va shunday qilib sizning programmingiz yaxshi va tez ishlaydi.</span>
-<span class="cm">Buni (garbage-collection &quot;axlat-teruvchi&quot;) deydilar.</span>
+<span class="cm">constants(o&#39;zgarmaydiganlar) ular huddi var dek ammo ularning qiymati o&#39;zgarmaydi</span>
 <span class="cm">*/</span>
+
+<span class="kn">package</span> <span class="nx">main</span>
+
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+	<span class="kd">const</span> <span class="nx">a</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;Salom Gopherbek&quot;</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+	<span class="nx">a</span> <span class="p">=</span> <span class="s">&quot;Salom Shavkat&quot;</span> <span class="c1">// xato beradi &quot;cannot assign to a&quot; (a&#39;ga yangi </span>
+<span class="c1">// qiymat yozolmaymiz).</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+
+<span class="p">}</span>
 </pre></div>
 
-<a href="buyruq.html" title="Buyruq">Keyingi sahifa</a> <br />
-<a href="env.html" title="Quttilar tuzilmasi">Oldingi sahifa</a> <br />
+<a href="https://play.golang.org/p/pu4Yb3B_TI">Kodni yurgizing</a> <br />
+<a href="misolprog.html" title="Misol Programma">Keyingi sahifa</a> <br />
+<a href="ozgaruvchi.html" title="O'zgaruvchi">Oldingi sahifa</a> <br />
 <a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
 
 <div id="disqus_thread"></div>

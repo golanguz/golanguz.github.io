@@ -44,7 +44,7 @@ func gopherBek() { // To'g'ri
 Aniqlanuvchi so'zlar juda xam zayif, Misol : GOPHERBEK, Gopherbek, GopherBek,
 gopherBek, va gopherbek. Bular ummuman farqli 5'ta aniqlanuvchi so'zlar,
 katta xarf bilan boshlanadigan so'zlar "Gopherbek" ular public(ochiq) bo'ladi
-ular boshqa fayl ichida xam qullanilsa bo'ladi, ammo kichkina xar bilan
+ular boshqa fayl ichida xam qullanilsa bo'ladi, ammo kichkina xarf bilan
 boshlangan so'zlar private(yopiq) va ular boshqa fayllarda qullanib bo'lmaydi.
 katta xarf kichkina xarf qoidasi paket nomlariga ta'lluqli emas chunki
 hamm package nomlari kichik xarflar bilan yoziladi.
@@ -69,7 +69,6 @@ Bunga qo'shimcha Go'da oldindan aniqlangan so'zlar bor:
 	bool	byte	rune	string	error
 
 // Functions(funksiyalar)
-
 	make	len	cap	new	append	copy	close	delete
 
 	complex	real	imag

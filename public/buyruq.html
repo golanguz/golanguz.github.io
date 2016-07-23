@@ -3,12 +3,13 @@
 
 <html>
 <head>
-  <title>Go Haqida</title>
+  <title></title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <style type="text/css">
   body{
     margin-left: 100px;
   }
+
 td.linenos { background-color: #f0f0f0; padding-right: 10px; }
 span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
 pre { line-height: 125%; }
@@ -80,48 +81,29 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 
   </style>
 </head>
-<h2 style="font-style: italic; color: purple;">#Go Haqida</h2>
+<body>
+<h2 style="font-style: italic; color: purple;">#Buyruqlar</h2>
 
 <div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">Avvalan bor Go dasturlash tili haqida bir oz ma&#39;lumot</span>
-<span class="cm">Go dasturlash tili Google korporatsiyasida 2009 yil yaratilgan </span>
-<span class="cm">uni yaratgan insonlar Robert griesemer, Rob pike, Ken thompson.</span>
-<span class="cm">https://en.wikipedia.org/wiki/Go_(programming_language)</span>
-<span class="cm">nima sababdan Google bu dasturlash tilini yaratdi? chunki, ular allaqachon </span>
-<span class="cm">ischlatiyotgan dasturlash tillari C++, Java, Python, va boshqa&quot;. Google </span>
-<span class="cm">korporatsiyasiga kerak bolgan performans bera ololmaganligi uchun yaratilga </span>
-<span class="cm">xozirgi zamonda Google&#39;ning 90foyizga yaqin backend&#39;i Golang dasturlash </span>
-<span class="cm">tilini ishlatadi, agar bilsangiz Google.com saytiga kuniga 1&#39;miliard&#39;dan ko&#39;p </span>
-<span class="cm">inson tashrif etadi, Va bullarning hammasi Golang yordami bilan eplanadi.</span>
-
-<span class="cm">Go bu statik-yozilim va garbage-collected dasturlash tili u ko&#39;p</span>
-<span class="cm">tillardan ALGOL60, CSP, Squeak, Newsqueak, Alef, Pascal, Modula-2, Oberon,</span>
-<span class="cm">Object Oberon, Oberon2, Va ko&#39;pincha C dan  g&#39;oya olgan. Statik-yozilim,</span>
-<span class="cm">Bu degani siz kod yoziyotganingizda Go To&#39;plamchisi(Compiler) xatolaringizni</span>
-<span class="cm">tekshiradi misol atom editorida go-plus paketini o&#39;rnatgan bo&#39;lsangiz</span>
-<span class="cm">kod yoziyotganingizda var ni o&#39;rniga car deb yozsangiz u sizga car so&#39;zini</span>
-<span class="cm">tagida qizli chiziq yozadi(xato degani),</span>
-<span class="cm">Go to&#39;plamchisi xam xuddi shunday ishlaydi.</span>
-<span class="cm">garbage-collceted(axlat-teruvchi)? Sistemingizdagi xotiralarni Go programmasi </span>
-<span class="cm">Qullanmiyotgan bo&#39;lsa Go to&#39;plamchisi o&#39;sha xotiralarni Bo&#39;shatadi,</span>
-<span class="cm">Qanaqa xotira? Misol birinchi sahifamizda ko&#39;rganingizdek (&quot;salom gopherbek&quot;)</span>
-<span class="cm">programmasini yozdik, uning xotirasi (mening sitemimda)&quot;0xc82000a310&quot; adresida, </span>
-<span class="cm">siszning sistemingizda farqli bo&#39;lishi mumkin. Ammo katta proyektlarda</span>
-<span class="cm">biz (&quot;salom gopherbek&quot;) yozmaymiz, Bizda yuzlab o&#39;zgaruvchilar,funksiyalar</span>
-<span class="cm">va structlar bo&#39;ladi, Va ularning xammasi o&#39;zlariga sistemingizda joy aniqlashadi.</span>
-<span class="cm">Misol sizda mobil o&#39;yin dasturi bor, va qullanuvchi u o&#39;yinni o&#39;yniyapti</span>
-<span class="cm">farqli tugmalarni bosiyapti, lekin sizning dasturingizsa tugmalar juda xam ko&#39;p</span>
-<span class="cm">ammo qullanchi faqat 2ta tugmani bosiyapti boshqa tugmalar ishlatilmasdan turipti</span>
-<span class="cm">lekin mobil telefonida xotira sarfliyapti, shu yerda (axlat-teruvchi) ishga</span>
-<span class="cm">tushadi bosilmiyotgan tugmalarni xotirasini bo&#39;shatadi(toki qullanchi ularni</span>
-<span class="cm">bosguncha) va shunday qilib sizning programmingiz yaxshi va tez ishlaydi.</span>
-<span class="cm">Buni (garbage-collection &quot;axlat-teruvchi&quot;) deydilar.</span>
+<span class="cm">Quydagi buyruqlar hamma sitemlar uchun bir. Windows, linux, MacOS.</span>
+<span class="cm">Terminalingizda godoc yozsangiz siga butun Go buyruqlari haqida ma&#39;lumot beradi</span>
+<span class="cm">lekin biz ularni hammasini qullanmaymiz bizning qullanadigan buyrularimiz</span>
+<span class="cm">#1 go run (fayl ismi).go Misol: go run main.go </span>
+<span class="cm">#2 go build (fayl ismi).go bu buyruq sizning kodingizni dastur qilib quradi</span>
+<span class="cm">// misol windows sistemasida faylingiz turgan qutti ichida yoki Go yo&#39;lchangizdagi</span>
+<span class="cm">// bin quttisiga .exe degan programmani quradi.</span>
+<span class="cm">#3 go install(yal ismi).go bu ham go build ga o&#39;xshab ishlaydi ammo bu faqat</span>
+<span class="cm">terminalda go run (fayl ismi).go yozmaslik uchun ishlatiladi ko&#39;pincha.</span>
+<span class="cm">yuqoridagi buyruqlarni faylingiz turgan qutti ichida yurgizasiz.</span>
+<span class="cm">#4 go tool tour buyruqi web browseringizda go tour dasturini ochadi uning o&#39;ng</span>
+<span class="cm">tomonida o&#39;zingizni kodingizni yozishingiz mumkin. yoki https://play.golang.org</span>
 <span class="cm">*/</span>
 </pre></div>
 
-<a href="buyruq.html" title="Buyruq">Keyingi sahifa</a> <br />
-<a href="env.html" title="Quttilar tuzilmasi">Oldingi sahifa</a> <br />
+<a href="saqsozlar.html" title="Saqlangan so'zlar">Keyingi sahifa</a> <br />
+<a href="gohaqida.html" title="Gohaqida">Oldingi sahifa</a> <br />
 <a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+
 
 <div id="disqus_thread"></div>
       <script>

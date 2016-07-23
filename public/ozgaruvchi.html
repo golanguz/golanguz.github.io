@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+
+  body{
+    margin-left: 100px;
+  }
+
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2 style="font-style: italic; color: purple;">#O'zgaruvchi</h2>
+
+<div class="highlight"><pre><span></span><span class="c1">// variable(o&#39;zgaruvchi) bu mahsus turlik sistema xotirasining joyi.</span>
+<span class="c1">// oldingi yozgan salom gopherbek programmasini o&#39;zgartiramiz,</span>
+<span class="c1">// va ushbu salom gopherbek stringini o&#39;zgaruvchiga joylaymiz.</span>
+
+<span class="kn">package</span> <span class="nx">main</span>
+
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">var</span> <span class="p">(</span>
+	<span class="nx">x</span> <span class="p">=</span> <span class="mi">1</span>
+	<span class="nx">y</span> <span class="p">=</span> <span class="mi">2</span>
+	<span class="nx">z</span> <span class="p">=</span> <span class="mi">3</span>
+	<span class="nx">q</span> <span class="p">=</span> <span class="s">&quot;Qaley&gt;?&quot;</span>
+	<span class="nx">boolean</span> <span class="p">=</span> <span class="kc">true</span>
+	<span class="nx">funksiya</span> <span class="p">=</span> <span class="kd">func</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">int</span><span class="p">{</span><span class="k">return</span>  <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="p">}</span>  <span class="c1">// anonim funksiyasi</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+
+	 <span class="c1">// h bu habar so&#39;zinig birinchi harfi uchun ishlatilgan</span>
+	   <span class="c1">// string bu o&#39;zgaruvchi h&#39;ning turi</span>
+	<span class="kd">var</span> <span class="nx">h</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;Salom Gopherbek&quot;</span> <span class="c1">// bu esa qiymat(value)</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="c1">// h&#39;ning &quot;Salom Gopherbek&quot; qiymatini terminalga yozamiz</span>
+<span class="c1">// Xabarni to&#39;g&#39;ri Println funksiyasini ichiga yozishni o&#39;rniga uni,</span>
+<span class="c1">// h o&#39;zgaruvchisiga joyliyabmiz.</span>
+<span class="c1">// o&#39;zgaruvchi aniqlayotgan zamon uning qiymatini aniqlash u sizga bog&#39;liq</span>
+<span class="c1">// yani qiymatsiz xam yaratsak bo&#39;ladi quydagidek:</span>
+	<span class="kd">var</span> <span class="nx">habar</span> <span class="kt">string</span> <span class="c1">// qiymatsiz</span>
+	<span class="nx">habar</span> <span class="p">=</span> <span class="s">&quot;Salom Gopherbek&quot;</span> <span class="c1">// qiymat joylandi</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">habar</span><span class="p">)</span> <span class="c1">// terminalga yozildi</span>
+<span class="c1">// o&#39;zgaruvchilar xuddi nomidek ular o&#39;zgaradi misol</span>
+	<span class="nx">habar</span> <span class="p">=</span> <span class="s">&quot;Salom Shavkat&quot;</span> <span class="c1">// habar o&#39;zgaruvchisining qiymatini o&#39;zgartirdik</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">habar</span><span class="p">)</span> <span class="c1">// &quot;Salom Shavkat&quot; yozib chiqaradi</span>
+
+<span class="c1">// funksiyalarning ichida qisqa yo&#39;l bilan o&#39;zgaruvchi aniqlash mumkin:</span>
+
+	<span class="nx">a</span> <span class="o">:=</span> <span class="s">&quot;Salom&quot;</span>
+	<span class="nx">b</span> <span class="o">:=</span> <span class="s">&quot;Dunyo&quot;</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="c1">// &quot;Salom Dunyo&quot;</span>
+
+<span class="c1">// qisqa aniqlash faqat funksiyalar ichida ishlaydi va funksiyadan tashqarida</span>
+<span class="c1">// aniqlash xato beradi. Yuqoridagi a va b o&#39;zgaruvchilari avtomatik xolatda</span>
+<span class="c1">// Go to&#39;plamchisi ularga tur beradi va u &quot;string&quot; turi chunki a va b&#39;ning</span>
+<span class="c1">// qiymati string.</span>
+
+<span class="c1">// Agar birdaniga ko&#39;p o&#39;zgaruvchi aniqlamiqchi bo&#39;lsangiz, ularni qavs ichiga</span>
+<span class="c1">// yozasiz xuddi yuqoridagi funksiyadan tashqaridagi o&#39;zgaruvchilarga o&#39;xshab</span>
+
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">,</span> <span class="nx">q</span><span class="p">,</span> <span class="nx">boolean</span><span class="p">,</span> <span class="nx">funksiya</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1">// 1 2 3 Qaley&gt;? true 5</span>
+<span class="c1">// ko&#39;rib turganingizdek funksiyadan tashqaridagi var zo&#39;sining ichida</span>
+<span class="c1">// bir dan ko&#39;p o&#39;zgaruvchi aniqladig son, string, boolean, va anonim funksiya</span>
+<span class="c1">// bu anonim funksiyasi bor yo&#39;g&#39;i ko&#39;rgazma va buni biz funksiyalar&#39;ga </span>
+<span class="c1">// qarashli sahifada o&#39;rganamiz.</span>
+
+<span class="p">}</span>
+</pre></div>
+
+<a href="https://play.golang.org/p/Z-kTIHH_oD">Kodni yurgizing</a> <br />
+<a href="constant.html" title="Constant">Keyingi sahifa</a> <br />
+<a href="string.html" title="String">Oldingi sahifa</a> <br />
+<a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+
+<div id="disqus_thread"></div>
+      <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+           */
+          /*
+          var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() {  // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = '//golanguzgithubio.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+
+
+</body>
+</html>

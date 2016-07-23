@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <style type="text/css">
+
+  body{
+    margin-left: 100px;
+  }
+
+td.linenos { background-color: #f0f0f0; padding-right: 10px; }
+span.lineno { background-color: #f0f0f0; padding: 0 5px 0 5px; }
+pre { line-height: 125%; }
+body .hll { background-color: #ffffcc }
+body  { background: #f8f8f8; }
+body .c { color: #408080; font-style: italic } /* Comment */
+body .err { border: 1px solid #FF0000 } /* Error */
+body .k { color: #008000; font-weight: bold } /* Keyword */
+body .o { color: #666666 } /* Operator */
+body .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+body .cp { color: #BC7A00 } /* Comment.Preproc */
+body .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cs { color: #408080; font-style: italic } /* Comment.Special */
+body .gd { color: #A00000 } /* Generic.Deleted */
+body .ge { font-style: italic } /* Generic.Emph */
+body .gr { color: #FF0000 } /* Generic.Error */
+body .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+body .gi { color: #00A000 } /* Generic.Inserted */
+body .go { color: #888888 } /* Generic.Output */
+body .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+body .gs { font-weight: bold } /* Generic.Strong */
+body .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+body .gt { color: #0044DD } /* Generic.Traceback */
+body .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+body .kp { color: #008000 } /* Keyword.Pseudo */
+body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+body .kt { color: #B00040 } /* Keyword.Type */
+body .m { color: #666666 } /* Literal.Number */
+body .s { color: #BA2121 } /* Literal.String */
+body .na { color: #7D9029 } /* Name.Attribute */
+body .nb { color: #008000 } /* Name.Builtin */
+body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+body .no { color: #880000 } /* Name.Constant */
+body .nd { color: #AA22FF } /* Name.Decorator */
+body .ni { color: #999999; font-weight: bold } /* Name.Entity */
+body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+body .nf { color: #0000FF } /* Name.Function */
+body .nl { color: #A0A000 } /* Name.Label */
+body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+body .nt { color: #008000; font-weight: bold } /* Name.Tag */
+body .nv { color: #19177C } /* Name.Variable */
+body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+body .w { color: #bbbbbb } /* Text.Whitespace */
+body .mb { color: #666666 } /* Literal.Number.Bin */
+body .mf { color: #666666 } /* Literal.Number.Float */
+body .mh { color: #666666 } /* Literal.Number.Hex */
+body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mo { color: #666666 } /* Literal.Number.Oct */
+body .sb { color: #BA2121 } /* Literal.String.Backtick */
+body .sc { color: #BA2121 } /* Literal.String.Char */
+body .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+body .s2 { color: #BA2121 } /* Literal.String.Double */
+body .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+body .sh { color: #BA2121 } /* Literal.String.Heredoc */
+body .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+body .sx { color: #008000 } /* Literal.String.Other */
+body .sr { color: #BB6688 } /* Literal.String.Regex */
+body .s1 { color: #BA2121 } /* Literal.String.Single */
+body .ss { color: #19177C } /* Literal.String.Symbol */
+body .bp { color: #008000 } /* Name.Builtin.Pseudo */
+body .vc { color: #19177C } /* Name.Variable.Class */
+body .vg { color: #19177C } /* Name.Variable.Global */
+body .vi { color: #19177C } /* Name.Variable.Instance */
+body .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+  </style>
+</head>
+<body>
+<h2 style="font-style: italic; color: purple;">#Sonlar</h2>
+
+<div class="highlight"><pre><span></span><span class="c1">//Go&#39;da birdan ko&#39;p farqli turlar bor, Ko&#39;pincha biz ularni ikkiga bo&#39;lamiz</span>
+<span class="c1">//ular integers va floating-point sonlar.</span>
+
+
+<span class="c1">// Integerlar</span>
+
+<span class="cm">/*</span>
+<span class="cm">intergerlar xuddi ularnin matematik qarindoshlariga oxshaydi desimal komponentsiz.</span>
+
+<span class="cm">Bizning kompyuter sistemamiz 10&#39;ta farqli dijitdan iborat. Misol biz sanayotgan</span>
+<span class="cm">vaqta bizarning fikrimizdagi dijitlar tugab qolsa biz, kattaroq sonlar ishlatishni</span>
+<span class="cm">boshlaymiz, 2, 3, 4, 5, 6, 7, 8, 9.</span>
+<span class="cm">Misol: 9&#39;dan keyin 10, 99&#39;dan keyin 100. Kompyuterlar xam xuddi shunday ammo</span>
+<span class="cm">ular 10&#39;tani o&#39;rniga faqat 2 dijit ishlatishadi.</span>
+<span class="cm">Va kompyuterlar uchun sanash quyidagidek: 0, 1, 10, 11, 100, 101, 110, 111 ...</span>
+<span class="cm">biz ishlatadigan va kompyuterlar ishlatadigan sonlar o&#39;rtasida farq, kompyuterlar</span>
+<span class="cm">intejer turlarining aniqlangan uzunligi bor. Misol: 4-bit integer quyidagidek:</span>
+<span class="cm">0000, 0001, 0010, 0011, 0100. Ammo bir oz vaqtdan keyin bunaqa sanashda</span>
+<span class="cm">bo&#39;sh joy qolmaydi, ko&#39;pincha kompyuterlar boshidan boshlaydi lekin bu yo&#39;l</span>
+<span class="cm">ko&#39;p noqulayliklarga olib kelishi mumkin</span>
+<span class="cm">*/</span>
+
+<span class="c1">//Go&#39;ning intejer turlari bu:</span>
+
+
+<span class="c1">//	int, uint, uint8, uint16, uint32, uint64, int8, int16, int32, int64</span>
+
+<span class="cm">/*</span>
+<span class="cm">8, 16, 32, 64 bular yuqoridagi turlarning bit uzunligi.  uint bu imzolanmagan</span>
+<span class="cm">integer, va int imzolangan integer, imzolanmagan integerlar faqat pozitive</span>
+<span class="cm">sonlarni yozoladi Misol: 0 nol va noldan ziyod. qo&#39;shimcha ikkita turlar bor</span>
+<span class="cm">byte(esingizda bo&#39;lsa oldindan aniqlangan so&#39;zlar)  bu xuddi uint8 ga o&#39;xshagan,</span>
+<span class="cm">rune(bu xam oldindan aniqlangan so&#39;zlar) bu xuddi int32 o&#39;xshagan</span>
+<span class="cm">Baytlar bullar judda xam kompyuterlarda muhim uint uzunlik o&#39;lcham turlari</span>
+<span class="cm">Misol:(1 byte = 8 bit, 1,024 byte = 1 kilobayt, 1,024 kilobayt = 1 megabayt ...)</span>
+<span class="cm">shuning uchun Go&#39;ning byte data turi ko&#39;pincha boshqa turlarda aniqlanib </span>
+<span class="cm">ishlatiladi. Yana uchta moshina(sistema) qarashli intejer turlar bor</span>
+<span class="cm">uint, int, va uintptr. Bular moshinaga qarashli chunki ularning uzunligi</span>
+<span class="cm">moshina(sistema) arxitekturasiga qarashli.</span>
+<span class="cm">Agar intejerlar bilan ishlayotgan bo&#39;lsangiz  bor yoqi int turini ishlatishingiz</span>
+<span class="cm">lozim.</span>
+<span class="cm">*/</span>
+
+
+<span class="c1">// Floating-Point sonlar</span>
+
+
+<span class="cm">/*</span>
+<span class="cm">floating-point tarjimasi, float bu havoda uchib turish xuddi kosmosdagidek,</span>
+<span class="cm">poing bu ko&#39;rsatgich, bir shaxsga barmoqingiz bilan ko&#39;rsatsangiz, point,</span>
+
+<span class="cm">floating-point sonlar bularning desimal komponenti bor, (xaqiqiy sonlar)</span>
+<span class="cm">Misol: 1.432, 1234.6, 000000.54, 0.4353453, va 123459994. Bular floating-point</span>
+<span class="cm">sonlar, Ularning kompyuterda korgazmasi juda xam qiyin va ularni ishlatish uchun</span>
+<span class="cm">ularning detallarini bilish juda muhim emas,</span>
+<span class="cm">xozircha quydagilarni eslab qolsanigz yetadi.</span>
+
+<span class="cm">-- Floating-point bular nomalum sonlar. Va bir sonni ko&#39;rastib bo&#39;lmaydi</span>
+<span class="cm">Misol 1.01 - 0.99 floating-point orqali tekshirsangiz javob</span>
+<span class="cm">0.020000000000000018 to&#39;g&#39;ri javobja juda xam yaqin ammo to&#39;g&#39;ri emas.</span>
+<span class="cm">-- Interjerlarga o&#39;xshab, floating-point sonlarning aniqlangan uzunligi bor</span>
+<span class="cm">(32 bit yoki 64 bit).</span>
+<span class="cm">-- Bir necha boshqa qiymatlar bor Ular: &quot;not a number(son emas)(NaN, 0/0 uchun)</span>
+<span class="cm">pozitiv va negativ infiniti(oxirisiz) (+∞ va −∞)</span>
+
+<span class="cm">Go&#39;ning ikkita floating-point turlari bu float32 va float64(yakka va qo&#39;shaloq</span>
+<span class="cm">aniqlik deb ataladilar mos ravishda). Hamda qo&#39;shimcha complex(murakkab) </span>
+<span class="cm">sonlari vakiligi ikkita turi bor (xayoliy sonlar qisimlari) complex64 va</span>
+<span class="cm">complex128, Odatda floating-point sonlarni ishlatiyotganda float64 ishlatishimiz</span>
+<span class="cm">lozim, Qulayroq.</span>
+
+<span class="cm">Misol: ikki sonni qo&#39;shadigan programma yarataylil</span>
+<span class="cm">src quttingizni ichida sonlar degan quttini yaratig va uning ichida main.go </span>
+<span class="cm">faylini yaratig. Quydagi yozing.</span>
+<span class="cm">*/</span>
+
+<span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;1 + 2 =&quot;</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="p">)</span>
+<span class="p">}</span>
+<span class="cm">/*</span>
+<span class="cm">kodni yurgizish uchun sonlar quttisini ichida terminal ochib go run main.go</span>
+<span class="cm">buyruqini yurgizing</span>
+<span class="cm">va terminalda &quot;1 + 1 = 3&quot; xabarini ko&#39;rishingiz lozim.</span>
+<span class="cm">ushbu programma xuddi salom gopherbek programmasiga o&#39;xshagan </span>
+<span class="cm">bunda xam package main, import &quot;fmt&quot;, va func main() { } bor</span>
+<span class="cm">ammo salom gopherbek&#39;ning o&#39;rniga biz 1 + 1 = ifodasini yozib chiqaryapmiz</span>
+<span class="cm">buning qisimlari iborati, sonlik ifoda 1(buning turi int) va + operatori</span>
+<span class="cm">(qo&#39;shmani bilintiradi) va boshqa sonlik ifoda 1, xuddi shu programmani </span>
+<span class="cm">floating-point bilan yozish mumkin quydagidek:</span>
+<span class="cm">fmt.Println(&quot;1 + 2 =&quot;, 1.0 + 2.0)</span>
+<span class="cm">bunda faqat bitta o&#39;zgarish bor bu .(nuqta) Go to&#39;planchisi buni floating-point </span>
+<span class="cm">deb biladi, ushbu programmani yurgizsangiz qaytimi xuddi birinchisidek bo&#39;ladi</span>
+
+<span class="cm">Go&#39;ning arifmetik operatorlari (qisqacha)</span>
+
+<span class="cm">+ qo&#39;shma</span>
+
+<span class="cm">- ayirma</span>
+
+<span class="cm">* ko&#39;paytirma</span>
+
+<span class="cm">/ bo&#39;lma</span>
+
+<span class="cm">% qoldiq</span>
+
+<span class="cm">operatorlarini xozircha eslab qolsangiz bo&#39;ladi keyinroq bular xaqida ko&#39;proq</span>
+<span class="cm">o&#39;rganamiz.</span>
+<span class="cm">*/</span>
+</pre></div>
+
+<a href="https://play.golang.org/p/553MiwASnz">Kodni yurgizing</a> <br />
+<a href="boolean.html" title="Boolean">Keyingi sahifa</a> <br />
+<a href="saqsozlar.html" title="Saqlangang so'zlar">Oldingi sahifa</a> <br />
+<a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+
+<div id="disqus_thread"></div>
+      <script>
+          /**
+           *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+           *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+           */
+          /*
+          var disqus_config = function () {
+              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function() {  // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+
+              s.src = '//golanguzgithubio.disqus.com/embed.js';
+
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+          })();
+      </script>
+
+
+
+</body>
+</html>
