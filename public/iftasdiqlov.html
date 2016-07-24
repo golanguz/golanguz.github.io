@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>Constants</title>
+  <title>If Statement</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <style type="text/css">
 
@@ -83,33 +83,72 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
 </head>
 <body>
-<h2 style="font-style: italic; color: purple;">#Constant</h2>
+<h2 style="font-style: italic; color: purple;">#If Statement</h2>
 
 <div class="highlight"><pre><span></span><span class="cm">/*</span>
-<span class="cm">constants(o&#39;zgarmaydiganlar) ular huddi var dek ammo ularning qiymati o&#39;zgarmaydi</span>
+<span class="cm">if(agar) statement(tasdiqlov) if tasdiqlovchisi programmadaa &quot;agar&quot; manosini </span>
+<span class="cm">bildiradi, Misol programmangiz bir shar bajarishi lozim aytaylik qo&#39;shish.</span>
+<span class="cm">2 + 2 = 4, va shar to&#39;g&#39;ri bo&#39;ladigan bo&#39;lsa siz xoxlaysiz ushbu if tasqilovchisi</span>
+<span class="cm">terminalga to&#39;g&#39;ri deb yozsin, agar to&#39;g&#39;ri bo&#39;lmasa noto&#39;g&#39;ri deb yozsin.</span>
+<span class="cm">if statementi quyidagidek yoziladi:</span>
 <span class="cm">*/</span>
+<span class="c1">// go yo&#39;lchasidagi src quttisida yangi qutti yaratamiz uning nomi if-statement</span>
+<span class="c1">// va u quttining ichida main.go faylini yaratamiz va fayl ichida quydagi kod:</span>
 
 <span class="kn">package</span> <span class="nx">main</span>
 
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
+<span class="kd">var</span> <span class="nx">qosh</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1">// o&#39;zgaruvchi qosh intejer qiymati 2+2. 2&#39;ni 2&#39;ga qo&#39;shish</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-	<span class="kd">const</span> <span class="nx">a</span> <span class="kt">string</span> <span class="p">=</span> <span class="s">&quot;Salom Gopherbek&quot;</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
-	<span class="nx">a</span> <span class="p">=</span> <span class="s">&quot;Salom Shavkat&quot;</span> <span class="c1">// xato beradi &quot;cannot assign to a&quot; (a&#39;ga yangi </span>
-<span class="c1">// qiymat yozolmaymiz).</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">qosh</span> <span class="o">==</span> <span class="mi">4</span> <span class="p">{</span> <span class="c1">// agar qosh o&#39;zgaruchisi 4&#39;ga teng bo&#39;lsa</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;2 + 2 = &quot;</span><span class="p">,</span> <span class="nx">qosh</span><span class="p">,</span> <span class="s">&quot;to&#39;g&#39;ri&quot;</span><span class="p">)</span> <span class="c1">// ushbu habar yozilsin</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// teng bo&#39;lmasa</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;noto&#39;g&#39;ri&quot;</span><span class="p">)</span> <span class="c1">// ushbu</span>
+	<span class="p">}</span>
 
+<span class="cm">/*</span>
+<span class="cm">ko&#39;rib turganingizdek if statementini ishlatib biz tekshiryapmiz qosh 4&#39;ga tengmi</span>
+<span class="cm">yo&#39;qmi, va ikki teng belgisini ishlatyapmiz, dasturlashda huddi shunday ikki</span>
+<span class="cm">tenglik belgisi ishlatiladi, va yagona tenglik belgisining ma&#39;nosi bu assignment</span>
+<span class="cm">(yozish). agar esingizda bo&#39;lsa boolean sahifasida bularni qullangan edik a==b.</span>
+<span class="cm">if dan keyin biz else so&#39;zini qullaniyapmiz, else(bo&#39;lmasa) degani, </span>
+<span class="cm">else javob ummuman topilmaganda ishlatiladi, ammo ifdan keyin else if, yoki else albatta bo&#39;lishi lozim aks xolda xato.</span>
+<span class="cm">if(agar) qosh == 4&#39;ga teng bo&#39;lsa &quot;to&#39;g&#39;ri&quot; habarini yoz, bo&#39;lmasa else&#39;ni</span>
+<span class="cm">qullanib &quot;noto&#39;g&#39;ri&quot;. bularning uchunchi si ham bor bu (else if)agar yana.</span>
+<span class="cm">bu if tasdiqlovchisini uzunlashtirishga yordam beradi. Misol aytaylik</span>
+<span class="cm">biz for loop qullanib 0&#39;dan ikkigacha sanyapmiz va ushbu for loopining ichida</span>
+<span class="cm">if tasdiqlovchisini yaratiyapmiz va unga aytiyapmiz if(agar) i bir bo&#39;lsa </span>
+<span class="cm">terminalda &quot;bir&quot; habarini yoz, else if(agar yana) i ikkiga teng bo&#39;lsa</span>
+<span class="cm">&quot;ikki&quot; habarini yoz, quyidagidek</span>
+<span class="cm">*/</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span> <span class="c1">// i &lt;= 2&#39;dan kam yoki tengmi? </span>
+		<span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// i bir bo&#39;lsa &quot;bir&quot; habari</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;bir&quot;</span><span class="p">)</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">i</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">{</span> <span class="c1">// i ikki bo&#39;lsa &quot;ikki&quot;</span>
+			<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;ikki&quot;</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
 <span class="p">}</span>
+<span class="c1">// if statementi yuqoridan pastga qarab o&#39;qiladi(yurigziladi) </span>
+<span class="c1">// agar if statementinig birinchi bloki(halqalar ichidagi kod) to&#39;g&#39;ri bo&#39;ladigan</span>
+<span class="c1">// bo&#39;lsa demak u yurgiziladi va boshqalari yurgizilmaydi, birinchi to&#39;g&#39;ri</span>
+<span class="c1">// blokdan keyingi blok  to&#39;g&#39;ri bolsa ham yurgizilmaydi.</span>
+<span class="c1">// go run main.go buyruqini yurgizsangiz quydagi habarni ko&#39;rishingiz lozim:</span>
+<span class="c1">// 2 + 2 =  4 to&#39;g&#39;ri</span>
+<span class="c1">// bir</span>
+<span class="c1">// ikki</span>
 </pre></div>
 
-<a href="https://play.golang.org/p/pu4Yb3B_TI">Kodni yurgizing</a> <br />
+
+<a href="">Kodni yurgizing</a> <br />
 <a href="misolprog.html" title="Misol Programma">Keyingi sahifa</a> <br />
-<a href="ozgaruvchi.html" title="O'zgaruvchi">Oldingi sahifa</a> <br />
+<a href="fortasdiqlov.html" title="For tasdiqlovchisi">Oldingi sahifa</a> <br />
 <a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+
 
 <div id="disqus_thread"></div>
       <script>

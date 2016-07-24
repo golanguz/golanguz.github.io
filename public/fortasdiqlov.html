@@ -3,12 +3,14 @@
 
 <html>
 <head>
-  <title>Misol programma</title>
+  <title>For loop</title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <style type="text/css">
 
 body{
+
   margin-left: 100px;
+
 }
 
 td.linenos { background-color: #f0f0f0; padding-right: 10px; }
@@ -83,52 +85,108 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
   </style>
 </head>
 <body>
-<h2 style="font-style: italic; color: purple;">#Misol Programma</h2>
+<h2 style="font-style: italic; color: purple;">#For Loop</h2>
 
-<div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+<div class="highlight"><pre><span></span><span class="c1">//for tasdiqlovchisi bir kodning parchasini birdan ko&#39;p martta yurgizadi</span>
+
+<span class="kn">package</span> <span class="nx">main</span>
+
 
 <span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
 
-<span class="kd">func</span> <span class="nx">far</span><span class="p">(</span><span class="nx">f</span> <span class="kt">float64</span><span class="p">)</span> <span class="kt">float64</span> <span class="p">{</span> <span class="c1">// farengeytdan tselsiyusga konverter funksiyasi</span>
-	 <span class="k">return</span> <span class="p">(</span><span class="nx">f</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">9</span> <span class="c1">// hisoblash bajarmasi</span>
-<span class="p">}</span>
 
 <span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
 
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Print</span><span class="p">(</span><span class="s">&quot;Son yozing: &quot;</span><span class="p">)</span> <span class="c1">// terminalda habar</span>
-
-	<span class="kd">var</span> <span class="nx">kirish</span> <span class="kt">float64</span> <span class="c1">// terminalda yoziladiga float64 sonini ushlaydi</span>
-
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Scanf</span><span class="p">(</span><span class="s">&quot;%f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">kirish</span><span class="p">)</span> <span class="c1">// kirishga yozilgan sonni skaner qiladi</span>
-
-	<span class="nx">chiqish</span> <span class="o">:=</span> <span class="nx">far</span><span class="p">(</span><span class="nx">kirish</span><span class="p">)</span> <span class="c1">// yangi o&#39;zgaruvchi chiqish.</span>
-<span class="c1">// yuqoridagi far funksiyasini ichiga kirish&#39;ni qoyib ikkisini chiqishga</span>
-<span class="c1">// joyliyaymiz</span>
-<span class="c1">// misol terminalda 100 ni yozsangiz 37.77777777 javobini olasiz, shu 100 soni</span>
-<span class="c1">// kirish o&#39;zgaruvchisiga kiradi, keyin skanner qilinadi, keyin far funksiyasi</span>
-<span class="c1">// ichiga joylanadi u funksiya 100 sonidan  32&#39;ni ayiradi(68).</span>
-<span class="c1">// keyin 5&#39;ni 9&#39;ga bo&#39;ladi(0.5555555) keyin ikkisining qiymatini ko&#39;paytiradi</span>
-<span class="c1">// 0.55555 * ko&#39;paytiramiz 68 = 37.777777. keyin bu javob(qiymat) chiqish</span>
-<span class="c1">// o&#39;zgaruvchisiga joylanadi va Println funksiyasi orqali terminlaga yoziladi.	</span>
-	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">chiqish</span><span class="p">)</span>
+	<span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span> <span class="c1">// o&#39;zgaruvchi aniqlaymiz uning qiymati 1</span>
+	<span class="k">for</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="p">{</span> <span class="c1">// for saqlangan so&#39;zi bilan loop(halqa) yaratamiz</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="c1">// i&#39;ni terminlaga yozib chiqaramiz</span>
+	<span class="nx">i</span> <span class="p">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1">// o&#39;ng tomondan i&#39;ga 1&#39;ni qo&#39;shamiz va qayta ayga yozamiz.</span>
 <span class="p">}</span>
+
 <span class="cm">/*</span>
-<span class="cm">Harakat qilin bitta shunday programma yozing va u selsiyusdan farengeytga konvert</span>
-<span class="cm">qilsin: Misol yuqoridagi kodni qisqa yo&#39;li ham bor.</span>
+<span class="cm">o&#39;zgaruvchi yaratamiz uning qiymati 1</span>
+<span class="cm">so&#39;ng for loop orqali tasdiqlovchi kod parchasi yaratamiz &lt;= 10 va loop</span>
+<span class="cm">aynalishni boshlaydi.</span>
 
-<span class="cm">	fmt.Print(&quot;Son yozing: &quot;)</span>
-<span class="cm">	var kirish float64</span>
-<span class="cm">	fmt.Scanf(&quot;%f&quot;, &amp;kirish)</span>
-<span class="cm">	chiqish := (kirish -32) * 5/9</span>
-<span class="cm">	fmt.Println(chiqish)</span>
+<span class="cm">i &lt;= 10 i o&#39;ndan kammi?  to&#39;g&#39;ri kam</span>
 
-<span class="cm">huddi yuqoridagi kod&#39;dek bu ham farengeytdan selsiyusga konvert qiladi.</span>
+<span class="cm">fmt.Println(i) i&#39;ni terminalga yozadi</span>
+
+<span class="cm">1&#39;ni i&#39;ga qo&#39;shadi va bir qo&#39;shilgan i&#39;ni  qayta i&#39;ga qo&#39;shadi, qiymat 2</span>
+
+<span class="cm">i &lt;= 10 i 10&#39;dan kammi ? to&#39;g&#39;ri kam</span>
+
+<span class="cm">fmt.Println(i) i&#39;ni terminalga yozadi</span>
+
+<span class="cm">1&#39;ni i&#39;ga qo&#39;shadi va bir qo&#39;shilgan i&#39;ni  qayta i&#39;ga qo&#39;shadi, qiymat 3</span>
+
+<span class="cm">va shunday davom etadi toki i 10&#39;ga teng bo&#39;lguncha, teng bo&#39;lganda to&#39;taydi</span>
 <span class="cm">*/</span>
+	<span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span> <span class="c1">// dasdiqlovchilar shartli ifodaning ichida </span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">j</span><span class="p">)</span>
+	<span class="p">}</span>
+
+
+<span class="c1">// ikkinchi for loop ham huddi birinchidek faqat dasdiqlovchilar shartli</span>
+<span class="c1">// ifodaning ichida, Va i = i + 1&#39;ning o&#39;rniga i++ ishlatiyapmiz</span>
+<span class="c1">// dasturlashda bu i = i + 1 juda ham ko&#39;p ishlatiladi shuning uchun</span>
+<span class="c1">// dasturchilar qisqa yo&#39;lini o&#39;ylab topgan i++&#39;ni i--&#39;si ham bor bu faqat </span>
+<span class="c1">// chappachasiga xisoblaydi 10&#39;dan pastga qarab ketadi quydagidek:</span>
+
+	<span class="k">for</span> <span class="nx">c</span> <span class="o">:=</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">c</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">c</span><span class="o">--</span> <span class="p">{</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span>
+	<span class="p">}</span>
+
+<span class="cm">/*</span>
+<span class="cm">uchunchi for loopda c&#39;ning qiymati 10, va keyin biz tekshiriyapmiz c &gt;= 0</span>
+<span class="cm">c 0 nolga tengmi ? yo&#39;q teng emas. c-- c&#39;dan(qiymati 10) birmatta ayirim</span>
+<span class="cm">ishlatyapmiz yani 1 sonini va uning qiymati 9 bo&#39;lyapti, keyin loop qilib</span>
+<span class="cm">aynalib kelyapmiz, yana tekshiryapmiz. toki c&#39;ning qiymati 0 nolga teng </span>
+<span class="cm">bo&#39;lmaguncha loop ishlaydi.</span>
+<span class="cm">	terminalga quydagi habarni yozib chiqaradi:</span>
+<span class="cm">		1</span>
+<span class="cm">		2</span>
+<span class="cm">		3</span>
+<span class="cm">		4</span>
+<span class="cm">		5</span>
+<span class="cm">		6</span>
+<span class="cm">		7</span>
+<span class="cm">		8</span>
+<span class="cm">		9</span>
+<span class="cm">		10</span>
+<span class="cm">		0</span>
+<span class="cm">		1</span>
+<span class="cm">		2</span>
+<span class="cm">		3</span>
+<span class="cm">		4</span>
+<span class="cm">		5</span>
+<span class="cm">		6</span>
+<span class="cm">		7</span>
+<span class="cm">		8</span>
+<span class="cm">		9</span>
+<span class="cm">		10</span>
+<span class="cm">		10</span>
+<span class="cm">		9</span>
+<span class="cm">		8</span>
+<span class="cm">		7</span>
+<span class="cm">		6</span>
+<span class="cm">		5</span>
+<span class="cm">		4</span>
+<span class="cm">		3</span>
+<span class="cm">		2</span>
+<span class="cm">		1</span>
+<span class="cm">		0</span>
+
+<span class="cm">*/</span>
+
+<span class="p">}</span>
 </pre></div>
 
-<a href="fortasdiqlov.html" title="For loop">Keyingi sahifa</a> <br />
-<a href="constant.html" title="Constant">Oldingi sahifa</a> <br />
+<a href="https://play.golang.org/p/SzHx7B7HJS">Kodni yurgizing</a> <br />
+<a href="iftasdiqlov.html" title="If tasdiqlovchisi">Keyingi sahifa</a> <br />
+<a href="misolprog.html" title="Misol programma">Oldingi sahifa</a> <br />
 <a href="../index.html" title="Bosh sahifa">Bosh sahifa</a> <br />
+
 
 <div id="disqus_thread"></div>
       <script>
@@ -151,6 +209,7 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
               (d.head || d.body).appendChild(s);
           })();
       </script>
+
 
 </body>
 </html>
